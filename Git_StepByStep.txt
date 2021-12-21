@@ -1,0 +1,95 @@
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (ma)
+$ git branch
+* main
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (ma)
+$ git checkout -b "NewGit"
+Switched to a new branch 'NewGit'
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git branch
+* NewGit
+  main
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git status
+On branch NewGit
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git add file1.txt
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git status
+On branch NewGit
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file1.txt
+
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git commit -m "new file created"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'admin@DESKTOP-INPT60S.(none)')
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git config --global user.email "shweta123sawant@gmail.com"
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git config --global user.name "9762shweta"
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git commit -m "new file created"
+[NewGit 683e629] new file created
+ 1 file changed, 9 insertions(+)
+ create mode 100644 file1.txt
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git status
+On branch NewGit
+nothing to commit, working tree clean
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git push
+fatal: The current branch NewGit has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin NewGit
+
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git push --set-upstream origin NewGit
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 456 bytes | 228.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'NewGit' on GitHub by visiting:
+remote:      https://github.com/mvishwajeet91/AutomationProject/pull/new/NewGit
+remote:
+To https://github.com/mvishwajeet91/AutomationProject.git
+ * [new branch]      NewGit -> NewGit
+Branch 'NewGit' set up to track remote branch 'NewGit' from 'origin'.
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ ^C
+
+admin@DESKTOP-INPT60S MINGW64 ~/Desktop/Framework/GitHub/AutomationProject (NewGit)
+$ git pull https://github.com/waddeshubham/AutomationProject.git              
