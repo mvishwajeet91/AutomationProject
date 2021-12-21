@@ -1,0 +1,9 @@
+git branch
+
+git checkout -b testBranch - to create new branch on local system
+git checkout branchName - it will switch to existing branch
+
+Code is always on main branch.
+git status 
+
+
