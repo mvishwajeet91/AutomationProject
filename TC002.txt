@@ -1,0 +1,48 @@
+package pom;
+
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import locators.Configuration;
+import parametrization.New5;
+import screenshot.Facebook;
+
+public class Runner2 {
+	public static void main(String[] args) throws InterruptedException, EncryptedDocumentException, IOException {
+		System.setProperty("webdriver.chrome.driver", Configuration.driverpath);
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.facebook.com");
+		
+		driver.manage().window().maximize();
+		
+		Thread.sleep(500);
+		
+		Demo2 d = new Demo2(driver);
+		
+		
+	     
+	 	Thread.sleep(500);
+	 	
+		Facebook t = new Facebook();
+		
+		New5 read = new New5();
+		  
+	 	Thread.sleep(500);
+	 	  t.screenshot(driver);
+	 	
+		d.uname(read.excelRead(0, 0));
+		
+		d.pass(read.excelRead(0, 1));
+		
+		d.button();
+		Thread.sleep(500);
+	    t.screenshot(driver);
+		
+	}
+
+}
